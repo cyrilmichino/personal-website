@@ -1,3 +1,43 @@
+:root {
+  --clr-primary:#070707;
+  --clr-accent: #fca311;
+
+  --clr-neutral-100: #ffffff;
+  --clr-neutral-200: #f6f6f6;
+  --clr-neutral-300: #e5e5e5;
+  --clr-neutral-400: #d3d3d3;
+  --clr-neutral-500: #7c7c7c;
+  --clr-neutral-600: #3a3a3a;
+  --clr-neutral-700: #070707;
+
+  --fs-300: 0.9375rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.25rem;
+  --fs-700: 1.5rem;
+  --fs-800: 1.75rem;
+  --fs-900: 2.25rem;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --ff-body: "Source Sans 3", serif;
+  --ff-heading: "Oswald", serif;
+}
+
+@media (min-width: 875px) {
+  :root {
+    --ff-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 2.5rem;
+  }
+  
+}
 
 /* Box sizing rules */
 *,
@@ -14,9 +54,9 @@ html {
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin-block-end: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -51,6 +91,7 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img,
+svg,
 picture {
   max-width: 100%;
   display: block;
