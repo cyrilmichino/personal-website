@@ -123,3 +123,20 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+.container {
+  margin-inline: 1rem;
+  margin-block: 0.5rem;
+  max-width: 1300px;
+}
+.logo {
+  display: flex;
+  gap: 0.5rem;
+}
+.logo img {
+  max-width: 3rem;
+}
+.logo p {
+  color: var(--clr-primary);
+  font-family: var(--ff-heading);
+}
