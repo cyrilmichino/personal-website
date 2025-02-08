@@ -28,7 +28,7 @@
   --ff-heading: "Oswald", serif;
 }
 
-@media (min-width: 875px) {
+@media (min-width: 50em) {
   :root {
     --ff-500: 1.25rem;
     --fs-600: 1.5rem;
@@ -36,7 +36,6 @@
     --fs-800: 2rem;
     --fs-900: 2.5rem;
   }
-  
 }
 
 /* Box sizing rules */
@@ -67,20 +66,31 @@ ol[role='list'] {
 
 /* Set core body defaults */
 body {
+  /* background-color: red; */
   min-height: 100vh;
   line-height: 1.5;
 }
 
 /* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
+h1, h2, h3, h4, h5,
 button, input, label {
   line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
 h1, h2,
-h3, h4 {
+h3, h4, h5 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+  /* color: red; */
   text-wrap: balance;
+}
+
+p {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-600);
+  font-size: var(--fs-400);
 }
 
 /* A elements that don't have a class get default styles */
@@ -113,4 +123,3 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
-
