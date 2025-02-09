@@ -26,6 +26,11 @@
 
   --ff-body: "Source Sans 3", serif;
   --ff-heading: "Oswald", serif;
+
+  --screen-smallest:40em;
+  --screen-small: 50em;
+  --screen-large: 80em;
+  --screen-largest: 90em;
 }
 
 @media (min-width: 50em) {
@@ -82,7 +87,6 @@ h1, h2,
 h3, h4, h5 {
   font-family: var(--ff-heading);
   font-weight: var(--fw-bold);
-  /* color: red; */
   text-wrap: balance;
 }
 
@@ -95,8 +99,10 @@ p {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
+  text-decoration: none;
   text-decoration-skip-ink: auto;
-  color: currentColor;
+  color: var(--clr-accent);
+  font-family: var(--ff-body);
 }
 
 /* Make images easier to work with */
@@ -110,8 +116,9 @@ picture {
 /* Inherit fonts for inputs and buttons */
 input, button,
 textarea, select {
-  font-family: inherit;
-  font-size: inherit;
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-600);
 }
 
 /* Make sure textareas without a rows attribute are not tiny */
@@ -124,19 +131,96 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-.container {
-  margin-inline: 1rem;
-  margin-block: 0.5rem;
-  max-width: 1300px;
+/* Utility Class */
+.bg-white {
+  background-color: var(--clr-neutral-100);
 }
+
+header {
+  padding: 1rem;
+  border: 1px solid var(--clr-neutral-400);
+  position: sticky;
+  top: 0;
+}
+
+button {
+  padding-inline: 1.5rem;
+  padding-block: 0.5rem;
+  color: var(--clr-primary);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-medium);
+  background-color: var(--clr-accent);
+  border: 2px solid var(--clr-accent);
+  border-radius: 5px;
+}
+button:hover {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+.button-outline {
+  color: var(--clr-accent);
+  opacity: 0;
+}
+
+/* Design for parent divs for all sections */
+.wrapper {
+  margin-inline: 1rem;
+}
+
+/* Flex properties for responsive design */
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-evenly {
+  justify-content: space-evenly;
+  gap: 0.75rem;
+}
+@media (min-width: 50em) {
+  .flex {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Site Logo and Favicon on Header */
 .logo {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   gap: 0.5rem;
 }
 .logo img {
-  max-width: 3rem;
+  max-width: 3.125rem;
+  aspect-ratio: auto;
+  /* align-self: center; */
 }
 .logo p {
   color: var(--clr-primary);
+  font-weight: var(--fw-semi-bold);
   font-family: var(--ff-heading);
+  font-size: var(--fs-600);
+}
+a.logo {
+  text-decoration: none;
+}
+a.logo :hover {
+  color: var(--clr-accent);
+}
+
+/* Navigation Menus on Header*/
+.nav a {
+  color: var(--clr-neutral-600);
+  font-size: var(--fs-500);
+}
+@media (max-width: 50em) {
+  .flex-direction-row {
+    flex-direction: row;
+  }
 }
