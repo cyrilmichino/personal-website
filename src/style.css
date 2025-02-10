@@ -160,6 +160,11 @@ header {
   position: sticky;
   top: 0;
 }
+@media (min-width: 50em) {
+  header {
+    padding-inline: 5rem;
+  }
+}
 
 button {
   padding-inline: 1.5rem;
@@ -177,19 +182,22 @@ button:hover {
   border-color: var(--clr-primary);
 }
 .button-outline {
+  width: 100%;
   color: var(--clr-accent);
   background-color: var(--clr-transparent);
 }
 
 /* Design for parent divs for all sections */
 .wrapper {
+  display: block;
   padding-inline: 1rem;
   padding-block: 2rem;
+  max-width: min(100%,90em);
+  margin: auto;
 }
 @media (min-width: 50em) {
   .wrapper {
     padding-inline: 5rem;
-    max-width: 90em;
   }
 }
 
@@ -206,10 +214,16 @@ button:hover {
   justify-content: space-evenly;
   gap: 0.75rem;
 }
+.flex-direction-row {
+  flex-direction: row;
+}
 @media (min-width: 50em) {
   .flex {
     flex-direction: row;
     align-items: center;
+  }
+  .flex-direction-column {
+    flex-direction: column;
   }
 }
 
@@ -270,8 +284,47 @@ a.logo :hover {
   color: var(--clr-neutral-600);
   font-size: var(--fs-500);
 }
+.nav a:hover {
+  color: var(--clr-accent);
+}
 @media (max-width: 50em) {
-  .flex-direction-row {
-    flex-direction: row;
+  .main-nav {
+    position: fixed;
+    width: min(100%, 250px);
+    border-left: 1px solid var(--clr-neutral-400);
+    gap: 2rem;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    padding: 2rem;
+    justify-content: flex-start;
+    background-color: var(--clr-neutral-100);
+  }
+  .nav-link {
+    width: 100%;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+  }
+  .nav-link:hover {
+    background-color: var(--clr-neutral-200);
+    border-radius: 5px;
+  }
+  .nav-button {
+    min-width: 100%;
+  }
+}
+
+/* Hide any element on the page based on JavScript execution */
+.hide {
+  display: none;
+}
+@media (min-width: 50em) {
+  .hide-desktop {
+    display: none;
+  }
+}
+@media (max-width: 50em) {
+  .hide-mobile {
+    display: none;
   }
 }
