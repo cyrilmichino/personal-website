@@ -168,7 +168,13 @@ button:hover {
 /* Design for parent divs for all sections */
 .wrapper {
   padding-inline: 1rem;
-  padding-block: 5rem;
+  padding-block: 2rem;
+}
+@media (min-width: 50em) {
+  .wrapper {
+    padding-inline: 5rem;
+    max-width: 90em;
+  }
 }
 
 /* Flex properties for responsive design */
@@ -189,6 +195,32 @@ button:hover {
     flex-direction: row;
     align-items: center;
   }
+}
+
+/* Grid properties for responsive design */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-block: 2rem;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .two-column {
+    grid-template-columns: 1fr 1fr;
+  }
+  .three-column {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--clr-neutral-400);
+  border-radius: 10px;
 }
 
 /* Site Logo and Favicon on Header */
