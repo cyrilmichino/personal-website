@@ -81,7 +81,7 @@ body {
 /* Set shorter line heights on headings and interactive elements */
 h1, h2, h3, h4, h5,
 button, input, label {
-  line-height: 1.1;
+  line-height: 1.5;
 }
 
 /* Balance text wrapping on headings */
@@ -167,7 +167,8 @@ button:hover {
 
 /* Design for parent divs for all sections */
 .wrapper {
-  margin-inline: 1rem;
+  padding-inline: 1rem;
+  padding-block: 5rem;
 }
 
 /* Flex properties for responsive design */
