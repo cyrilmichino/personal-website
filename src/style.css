@@ -47,6 +47,18 @@
   }
 }
 
+/* Remove default margin in favour of better control in authored CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -61,23 +73,10 @@ html {
   text-size-adjust: none;
 }
 
-/* Remove default margin in favour of better control in authored CSS */
-* {
-  margin: 0;
-  padding: 0;
-}
-
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
-}
-
-/* Set core body defaults */
-body {
-  /* background-color: red; */
-  min-height: 100vh;
-  line-height: 1.5;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -149,15 +148,6 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-/* Utility Class */
-.bg-white {
-  background-color: var(--clr-neutral-100);
-}
-.bg-black {
-  background-color: var(--clr-neutral-700);
-  color: var(--clr-neutral-100);
-}
-
 header {
   padding: 1rem;
   border: 1px solid var(--clr-neutral-400);
@@ -169,6 +159,13 @@ header {
   header {
     padding-inline: 5rem;
   }
+}
+
+footer {
+  padding: 1rem;
+}
+footer p {
+  font-size: var(--fs-500);
 }
 
 button {
@@ -246,6 +243,11 @@ img {
   }
   .flex-direction-column {
     flex-direction: column;
+  }
+  .centered {
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
   }
 }
 
@@ -378,4 +380,24 @@ a.logo :hover {
   .hide-mobile {
     display: none;
   }
+}
+
+/* Utility Classes */
+.bg-white {
+  background-color: var(--clr-neutral-100);
+}
+.bg-black {
+  background-color: var(--clr-neutral-700);
+}
+.text-accent {
+  color: var(--clr-accent);
+}
+.text-white {
+  color: var(--clr-neutral-100);
+}
+.text-white a {
+  color: var(--clr-neutral-100);
+}
+.text-white a:hover {
+  color: var(--clr-accent);
 }
