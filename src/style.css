@@ -153,6 +153,10 @@ textarea:not([rows]) {
 .bg-white {
   background-color: var(--clr-neutral-100);
 }
+.bg-black {
+  background-color: var(--clr-neutral-700);
+  color: var(--clr-neutral-100);
+}
 
 header {
   padding: 1rem;
@@ -189,6 +193,9 @@ button:hover {
 }
 
 /* Style images across the website */
+svg {
+  color: var(--clr-accent);
+}
 img {
   border-radius: 10px;
   filter: grayscale(1);
@@ -286,6 +293,9 @@ img {
 .card:hover {
   box-shadow: 5px 5px 10px var(--clr-neutral-300);
   transition: box-shadow 0.3s ease;
+}
+.card:hover h3 {
+  color: var(--clr-accent);
 }
 
 .logo-image {
