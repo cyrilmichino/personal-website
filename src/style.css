@@ -137,7 +137,12 @@ textarea, select {
   font-size: var(--fs-400);
   color: var(--clr-neutral-600);
 }
-
+select {
+  min-height: 50px;
+  border: 2px solid var(--clr-neutral-400);
+  border-radius: 5px;
+  color: var(--clr-neutral-500);
+}
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
   min-height: 10em;
@@ -164,9 +169,12 @@ button:hover {
   border-color: var(--clr-primary);
 }
 .button-outline {
-  width: 100%;
   color: var(--clr-accent);
   background-color: var(--clr-transparent);
+}
+.button-hover-white:hover {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary);
 }
 
 /* Style images across the website */
@@ -215,6 +223,10 @@ img {
 }
 .flex-direction-row {
   flex-direction: row;
+}
+.vertical-centered {
+  justify-content: center;
+  gap: 0.75rem;
 }
 @media (min-width: 50em) {
   .flex {
@@ -274,10 +286,10 @@ footer p {
 }
 @media (max-width:50em) {
   footer {
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     gap: 0.75rem;
-    flex-direction: column-reverse;
   }
 }
 
@@ -307,6 +319,24 @@ footer p {
 }
 .card:hover h3 {
   color: var(--clr-accent);
+}
+
+.icon-card {
+  background-color: var(--clr-neutral-100);
+  padding: 0.5rem;
+  border-radius: 50px;
+}
+.cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral-100);
+  padding-block: 2rem;
+  padding-inline: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  gap: 1rem;
 }
 
 .logo-image {
@@ -401,6 +431,9 @@ a.logo :hover {
 .text-accent {
   color: var(--clr-accent);
 }
+.text-light {
+  color: var(--clr-neutral-500);
+}
 .text-white {
   color: var(--clr-neutral-100);
 }
@@ -409,4 +442,13 @@ a.logo :hover {
 }
 .text-white a:hover {
   color: var(--clr-accent);
+}
+.text-centered {
+  text-align: center;
+}
+.font-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.full-width {
+  width: 100%;
 }
