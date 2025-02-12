@@ -148,26 +148,6 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-header {
-  padding: 1rem;
-  border: 1px solid var(--clr-neutral-400);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-@media (min-width: 50em) {
-  header {
-    padding-inline: 5rem;
-  }
-}
-
-footer {
-  padding: 1rem;
-}
-footer p {
-  font-size: var(--fs-500);
-}
-
 button {
   padding-inline: 1.5rem;
   padding-block: 0.5rem;
@@ -244,12 +224,8 @@ img {
   .flex-direction-column {
     flex-direction: column;
   }
-  .centered {
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
-  }
 }
+
 
 /* Grid properties for responsive design */
 .grid {
@@ -269,6 +245,39 @@ img {
   .two-column-60-40 {
     grid-template-areas:
     'one one one two two'
+  }
+}
+
+header {
+  padding: 1rem;
+  border: 1px solid var(--clr-neutral-400);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+@media (min-width: 50em) {
+  header {
+    padding-inline: 5rem;
+  }
+}
+
+footer {
+  padding: 1rem;
+}
+footer p {
+  font-size: var(--fs-500);
+}
+@media (min-width: 50em) {
+  footer {
+    padding-inline: 5rem;
+  }
+}
+@media (max-width:50em) {
+  footer {
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    flex-direction: column-reverse;
   }
 }
 
