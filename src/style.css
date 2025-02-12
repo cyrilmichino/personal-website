@@ -271,6 +271,29 @@ img {
   border: 1px solid var(--clr-neutral-400);
   border-radius: 10px;
 }
+.blog-card {
+  padding: 0;
+  gap: 1rem;
+}
+.blog-card-content {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1.5rem;
+  padding-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 10px var(--clr-neutral-300);
+  transition: box-shadow 0.3s ease;
+}
+
+.logo-image {
+  width: 100px;
+  aspect-ratio: 1 /1;
+  border-radius: 75px;
+  filter: grayscale(0);
+}
 
 /* Site Logo and Favicon on Header */
 .logo {
