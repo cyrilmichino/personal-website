@@ -159,6 +159,7 @@ header {
   border: 1px solid var(--clr-neutral-400);
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 @media (min-width: 50em) {
   header {
@@ -185,6 +186,20 @@ button:hover {
   width: 100%;
   color: var(--clr-accent);
   background-color: var(--clr-transparent);
+}
+
+/* Style images across the website */
+img {
+  border-radius: 10px;
+  filter: grayscale(1);
+}
+.portrait {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  object-fit: cover;
+}
+.portrait-tall {
+  aspect-ratio: 3 / 5;
 }
 
 /* Design for parent divs for all sections */
@@ -242,6 +257,10 @@ button:hover {
   .three-column {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .two-column-60-40 {
+    grid-template-areas:
+    'one one one two two'
+  }
 }
 
 .card {
@@ -264,7 +283,6 @@ button:hover {
 .logo img {
   max-width: 3.125rem;
   aspect-ratio: auto;
-  /* align-self: center; */
 }
 .logo p {
   color: var(--clr-primary);
