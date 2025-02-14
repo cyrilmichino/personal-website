@@ -420,9 +420,6 @@ a.logo :hover {
 }
 
 /* Hide any element on the page based on JavScript execution */
-.hide {
-  display: none;
-}
 @media (min-width: 50em) {
   .hide-desktop {
     display: none;
@@ -432,6 +429,9 @@ a.logo :hover {
   .hide-mobile {
     display: none;
   }
+}
+.hide {
+  display: none;
 }
 
 /* Utility Classes */
