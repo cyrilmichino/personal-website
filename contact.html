@@ -32,12 +32,29 @@
       </header>
       <main>
         <div class="wrapper">
-            <h1>Contact Me</h1>
-        </div>
-        <div class="wrapper">
-            <iframe id="JotFormIFrame-250471949833567" title="Website Contact Form" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/250471949833567" frameborder="0" style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no" > </iframe>
-            <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-            <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-250471949833567']", "https://form.jotform.com/")</script> 
+            <div>
+                <h1>Contact Me</h1>
+                <p>Get in touch with me for consulting services, collaboration requests, speaking engagements, etc.</p>
+            </div>
+            <form action="https://formspree.io/f/mkgoprpk" method="POST" class="flex space-evenly flex-direction-column">
+                <div class="flex space-evenly flex-direction-row full-width"><label for="fname" class="full-width">
+                    First Name <br>
+                    <input type="text" name="fname" id="fname" placeholder="John" required class="full-width">
+                </label>
+                <label for="lname" class="full-width">
+                    Last Name <br>
+                    <input type="text" name="lname" id="lname" placeholder="Doe" class="full-width">
+                </label></div>
+                <label for="email" class="full-width">
+                    Email Address<br>
+                    <input type="email" name="email" id="email" required placeholder="johndoe@gmail.com" class="full-width">
+                </label>
+                <label for="message" class="full-width">
+                    Enter your message<br>
+                    <textarea name="message" id="message" required placeholder="Type here" class="full-width"></textarea>
+                </label>
+                <button type="submit" class="full-width">Submit</button>
+            </form> 
         </div>
       </main>
       <footer class="flex space-between bg-black horizontal-centered">
