@@ -1,12 +1,10 @@
-const navbar = document.getElementsById("main-menu");
-const hamburger = document.getElementById("hamburger");
-const closeToggle = document.getElementsById("close-toggle")
+function toggleMenu() {
+    var navbar = document.getElementById("main-menu");
+    navbar.classList.toggle("hide-mobile");
+}
 
-function showMenu() {
-    hamburger.addEventListener('click')
-    navbar.classList.toggle("hide-mobile");
-}
-function hideMenu() {
-    closeToggle.addEventListener('click')
-    navbar.classList.toggle("hide-mobile");
-}
+// const hamburger = document.getElementById("hamburger");
+// hamburger.addEventListener('click', toggleMenu());
+
+// const closeToggle = document.getElementById("close-toggle");
+// closeToggle.addEventListener('click', toggleMenu());
