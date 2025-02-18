@@ -9,29 +9,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css">
+    <script src="/src/main.js" defer></script>
   </head>
   <body>
     <header class="bg-white">
-        <div class="flex space-between flex-direction-row">
-          <a href="index.html" class="logo space-between">
-            <img src="public/avatar.webp" alt="Cyril Michino Notion-Type Avatar">
-            <p class="logo-title">Cyril Michino</p>
-          </a>
-          <nav>
-            <ul id="main-menu" role="list" class="nav flex space-evenly main-nav hide-mobile">
-              <li id="close-toggle" class="nav-link hide-desktop"><a href="javascript:void(0);" onclick="toggleMenu()">Icon</i></a></li>
-              <li class="nav-link"><a href="about.html">About Me</a></li>
-              <li class="nav-link"><a href="blog.html">Blog Publication</a></li>
-              <li class="nav-link"><a href="consulting.html">Consulting Services</a></li>
-              <li class="nav-button"><a href="contact.html"><button type="button" class="button-outline full-width">Contact Me</button></a></li>
-            </ul>
-            <p id="hamburger" class="nav-link hide-desktop"><a href="javascript:void(0);" onclick="toggleMenu()">Icon</i></a></p>
-          </nav>
-        </div>
-      </header>
+      <div class="flex space-between flex-direction-row">
+        <a href="index.html" class="logo space-between">
+          <img src="public/avatar.webp" alt="Cyril Michino Notion-Type Avatar">
+          <p class="logo-title">Cyril Michino</p>
+        </a>
+        <nav>
+          <ul id="main-menu" role="list" class="nav flex space-evenly main-nav hide-mobile">
+            <li class="nav-link hide-desktop"><a id="close-toggle" href="javascript:void(0);" onclick=toggleMenu()>
+              <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="currentColor">
+                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class="nav-link"><a href="about.html">About Me</a></li>
+            <li class="nav-link"><a href="blog.html">Blog Publication</a></li>
+            <li class="nav-link"><a href="consulting.html">Consulting Services</a></li>
+            <li class="nav-button"><a href="contact.html"><button type="button" class="button-outline full-width">Contact Me</button></a></li>
+          </ul>
+          <p class="nav-link hide-desktop"><a id="hamburger" href="javascript:void(0);" onclick=toggleMenu()>
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="currentColor">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+          </a></p>
+        </nav>
+      </div>
+    </header>
       <main>
 
       </main>
-
-    <script type="module" src="/src/main.js"></script>
   </body>
