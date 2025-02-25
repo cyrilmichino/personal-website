@@ -115,7 +115,7 @@ p {
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
+a {
   text-decoration: none;
   text-decoration-skip-ink: auto;
   color: var(--clr-accent);
@@ -500,4 +500,7 @@ a.logo :hover {
 }
 .full-width {
   width: 100%;
+}
+.full-height {
+  height: 100%;
 }
