@@ -255,47 +255,46 @@ img {
 /* Grid properties for responsive design */
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   margin-block: 2rem;
   gap: 1rem;
+  grid-auto-flow: dense;
 }
-.project-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-areas:
-  'one'
-  'two'
-  'three'
-  'four'
+.span-2-rows {
+  grid-row: span 2;
 }
-.project:nth-child(1) {
-  grid-area: one;
-}
-.project:nth-child(2) {
-  grid-area: two;
-}
-.project:nth-child(3) {
-  grid-area: three;
-}
-.project:nth-child(4) {
-  grid-area: four;
-}
-
-@media (min-width: 50em) {
+@media (min-width: 40em) {
   .two-column {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .three-column {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .two-column-60-40 {
-    grid-template-areas:
-    'one one one two two'
+  .five-column {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .project-grid {
-    grid-template-areas:
-    'one one two'
-    'three four four'
+  .span-2-cols {
+    grid-column: span 2;
+  }
+  .span-3-cols {
+    grid-column: span 3;
+  }
+  .span-4-cols {
+    grid-column: span 3;
+  }
+}
+@media (min-width: 60em) {
+  .two-column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .three-column {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .five-column {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .span-4-cols {
+    grid-column: span 4;
   }
 }
 
@@ -371,6 +370,9 @@ footer p {
   background-color: var(--clr-neutral-100);
   padding: 0.5rem;
   border-radius: 50px;
+}
+.icon-card:hover {
+  border-radius: 10px;
 }
 .cta-card {
   display: flex;
