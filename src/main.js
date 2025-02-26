@@ -44,14 +44,18 @@ for (i=0; i<blogs.length; i++) {
             </div>
           </div></a>`
     } else {
-        otherBlogContent += `<a href=${blogs[i].url} class="full-height"><div class="card blog-card full-height">
-            <img src=${blogs[i].image} alt="Blog Banner">
-            <div class="blog-card-content">
-              <h3>${blogs[i].title}</h3>
-              <p>${blogs[i].description}</p>
-              <p class="text-light">Posted on ${blogs[i].posted} • ${blogs[i].date}</p>
-            </div>
-          </div></a>`
+        otherBlogContent += `<a href=${blogs[i].url}><div class="grid four-column">
+                      <div class="span-3-cols flex flex-direction-column vertical-centered blog-row-content">
+                        <div class="flex flex-direction-row space-evenly">
+                          <p class="text-accent font-semi-bold text-smallest">Programming</p>
+                          <p class="text-accent font-semi-bold text-smallest">Data Science</p>
+                        </div>
+                        <h3>${blogs[i].title}</h3>
+                        <p>${blogs[i].description}</p>
+                        <p class="text-light">Posted on ${blogs[i].posted} • ${blogs[i].date}</p>
+                      </div>
+                        <img src=${blogs[i].image} alt="Blog Banner" class="hide-tablet">
+                      </div></a>`
     }
 }
 
