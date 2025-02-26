@@ -7,7 +7,9 @@ function toggleMenu() {
     overlay.classList.toggle("hide-mobile");
 }
 
-// Define the blog posts to be displayed on the website (Featured blogs will have featured = 1)
+/* Display blogs on the homepage and blog page (Blog Sections) */
+
+// Define the blog posts to be displayed on the website
 let blogs = [{featured: 1, image: "public/founderalgorithm.webp", title: "The Founder's Algorithm – 7 Lessons I Wish I Learned Sooner",
     description: "From costly mistakes to proven strategies: A founder shares 7 fundamental rules for building successful startups, distilled from 5+ years of hands-on experience",
     url: "https://michino.substack.com/p/the-founders-algorithm-7-rules-i", date: "Feb 14, 2025", posted: 'Substack'},
@@ -24,10 +26,13 @@ let blogs = [{featured: 1, image: "public/founderalgorithm.webp", title: "The Fo
     description: "From costly mistakes to proven strategies: A founder shares 7 fundamental rules for building successful startups, distilled from 5+ years of hands-on experience",
     url: "https://michino.substack.com/p/the-founders-algorithm-7-rules-i", date: "Feb 14, 2025", posted: 'Substack'}];
 
-// Display blogs on the homepage and blog page (Categorised based on if featured)
+// Add blog cards to blog divs based on whether a blog ios featured or not
 const featuredBlogs = document.getElementById('featured-blogs')
+const otherBlogs = document.getElementById('other-blogs')
 
 let featuredBlogContent = ""
+let otherBlogContent = ""
+
 for (i=0; i<blogs.length; i++) {
     if (blogs[i].featured == 1) {
         featuredBlogContent += `<a href=${blogs[i].url} class="full-height"><div class="card blog-card full-height">
@@ -38,11 +43,23 @@ for (i=0; i<blogs.length; i++) {
               <p class="text-light">Posted on ${blogs[i].posted} • ${blogs[i].date}</p>
             </div>
           </div></a>`
+    } else {
+        otherBlogContent += `<a href=${blogs[i].url} class="full-height"><div class="card blog-card full-height">
+            <img src=${blogs[i].image} alt="Blog Banner">
+            <div class="blog-card-content">
+              <h3>${blogs[i].title}</h3>
+              <p>${blogs[i].description}</p>
+              <p class="text-light">Posted on ${blogs[i].posted} • ${blogs[i].date}</p>
+            </div>
+          </div></a>`
     }
 }
-featuredBlogs.innerHTML = featuredBlogContent
 
-// Create typed animation on blog header page
+featuredBlogs.innerHTML = featuredBlogContent
+otherBlogs.innerHTML = otherBlogContent
+
+
+// Create typed animation on homepage banner
 var typed = new Typed('#toggle-text', {
     strings: ['a Data Scientist', 'an Entrepreneur','a Data Consultant'],
     typeSpeed: 100,
