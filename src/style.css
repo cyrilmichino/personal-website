@@ -176,10 +176,6 @@ button:hover {
   color: var(--clr-accent);
   background-color: var(--clr-transparent);
 }
-.button-hover-white:hover {
-  background-color: var(--clr-neutral-100);
-  color: var(--clr-primary);
-}
 
 /* Style images across the website */
 svg {
@@ -263,12 +259,21 @@ img {
 .span-2-rows {
   grid-row: span 2;
 }
+.no-margin {
+  margin-block: 0rem;
+}
+.small-gap {
+  gap:0.25rem;
+}
 @media (min-width: 40em) {
   .two-column {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .three-column {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .four-column {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .five-column {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -289,6 +294,9 @@ img {
   }
   .three-column {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .four-column {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .five-column {
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -357,12 +365,20 @@ footer p {
   padding-bottom: 1.5rem;
   gap: 1rem;
 }
-
-.card:hover {
+.blog-row-content {
+  gap: 0.25rem;
+}
+.blog-row-content:hover h3 {
+  color: var(--clr-accent);
+}
+a .card h2,h3,h4 {
+  color: var(--clr-neutral-700);
+}
+a .card:hover {
   box-shadow: 5px 5px 10px var(--clr-neutral-300);
   transition: box-shadow 0.3s ease;
 }
-.card:hover h3 {
+a .card:hover h3 {
   color: var(--clr-accent);
 }
 
@@ -469,6 +485,11 @@ a.logo :hover {
     display: none;
   }
 }
+@media (max-width: 60em) {
+  .hide-tablet{
+    display: none;
+  }
+}
 @media (max-width: 50em) {
   .hide-mobile {
     display: none;
@@ -502,6 +523,9 @@ a.logo :hover {
 }
 .text-centered {
   text-align: center;
+}
+.text-smallest {
+  font-size: var(--fs-300);
 }
 .font-semi-bold {
   font-weight: var(--fw-semi-bold);
