@@ -396,9 +396,9 @@ a .card:hover {
 a .card:hover h3 {
   color: var(--clr-accent);
 }
-
 .icon-card {
-  background-color: var(--clr-neutral-100);
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
   padding: 0.5rem;
   border-radius: 50px;
 }
