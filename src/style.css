@@ -26,8 +26,8 @@
   --fw-semi-bold: 600;
   --fw-bold: 700;
 
-  --ff-body: "Source Sans 3", serif;
-  --ff-heading: "Oswald", serif;
+  --ff-body: "Source Sans 3", sans-serif;
+  --ff-heading: "Oswald", sans-serif;
 
   --screen-smallest:40em;
   --screen-small: 50em;
@@ -166,6 +166,10 @@ button {
   background-color: var(--clr-accent);
   border: 2px solid var(--clr-accent);
   border-radius: 5px;
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: row;
+  justify-content: center;
 }
 button:hover {
   color: var(--clr-neutral-100);
@@ -176,11 +180,22 @@ button:hover {
   color: var(--clr-accent);
   background-color: var(--clr-transparent);
 }
+.btn-no-outline {
+  background-color: var(--clr-transparent);
+  color: var(--clr-accent);
+  border: 0;
+  padding: 0.2rem;
+  justify-content: left;
+}
+.btn-no-outline:hover {
+  background-color: var(--clr-transparent);
+  color: var(--clr-primary);
+}
 
 /* Style images across the website */
-svg {
+/* svg {
   color: var(--clr-accent);
-}
+} */
 img {
   border-radius: 10px;
   filter: grayscale(1);
